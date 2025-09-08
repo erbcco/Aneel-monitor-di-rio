@@ -59,8 +59,7 @@ jobs:
         if [ -f "resultados_aneel.json" ]; then
           echo "📋 Resumo da Execução:"
           python -c "
-import json
-with open('resultados_aneel.json', 'r', encoding='utf-8') as f:
+import json with open('resultados_aneel.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
     stats = data['estatisticas']
     print(f'✅ Execução concluída em: {stats[\"data_execucao\"]}')
